@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contate-nós</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div><a class="logo" href="home.html">FutureCast</a></div>
+            <a class="navegacao" href="Trabalho.html">Trabalho</a>
+            <a class="navegacao" href="Vida.html">Vida</a>
+            <a class="navegacao" href="Familia.html">Família</a>
+            <a class="navegacao" href="contato.html">Contate-nós</a>
+            <a class="navegacao" href="index.html">Sair</a>
+        </nav>
+    </header>
+
+         <h1 class="titulo-principal">Contate-nós!</h1>
+         <hr>
+
+    <div class="container-contato">
+         <form target="_blank" action="https://wa.me/5515997843017?text=Gostaria%20de%20saber%20mais!" method="GET" class="form-contate">
+        <fieldset class="fieldset-contate-nos">
+            <div class="form-inicio">
+                <label class="label-contato" for="user-email">Nome completo</label>
+                <input type="text" id="user-email" name="email" placeholder="Kaiky Gabriel Teixeira Farias" required>
+            </div>
+
+            <div class="form-inicio">
+                <label class="label-contato" for="user-password">Número de Whatsapp</label>
+                <input type="number" id="user-password" name="password" placeholder="(15) - 9999-9999" required
+                    minlength="6" required>
+            </div>
+
+           
+                <button type="submit" id="criar-conta">Contate-nos!</button>
+            
+        </fieldset>
+    </form>
+
+
+    </div>
+   
+
+    <footer>
+        <div class="rodape">
+            <h4>Desenvolvido por: Kaiky, Murilo, Marcos, Miguel, Paulo, Otávio, Kauê, Matheus Wanderson, Matheus Caioli,
+                Nicolas :) </h4>
+        </div>
+    </footer>
+
+    <script>
+        var button_enviar = document.getElementById('criar-conta')
+        button_enviar.addEventListener('click', enviar);
+        
+        function enviar() {
+            button_enviar.innerText = 'Obrigado pelo contato!'
+        }
+
+        
+    </script>
+</body>
+
+</html>

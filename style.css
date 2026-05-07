@@ -9,6 +9,28 @@ body {
     gap: 20px;
     font-family: 'Poppins', sans-serif;
 }
+.button-contate-nos {
+    margin: 5px 10px;
+}
+
+.imagem-contate {
+    align-items: center;
+    
+}
+
+.fieldset-contate-nos {
+    border: none;
+}
+
+.form-contate {
+    display: flex;
+    justify-content: center;
+
+}
+
+#link-contato {
+    text-decoration: none;
+}
 
 .container {
     display: flex;
@@ -202,7 +224,14 @@ button {
 }
 
 
-
+.container-contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -8%;
+    margin-top: -5%;
+}
 
 .feed {
     display: flex;
@@ -223,6 +252,11 @@ button {
     overflow: hidden;
     text-align: left;
     transition: transform 0.3s ease;
+}
+
+.label-contato {
+    text-align: center;
+    align-items: center;
 }
 
 .card:hover {
@@ -418,5 +452,14 @@ button {
     }
     /* responsividade para celular (@media define a condição do tamanho da tela, se essa condição for verdadeira a estilização abaixo dele passa a sobrepor a original*/
     
+    .container-contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -1%;
+    margin-top: 3%;
+}
+
 }
 
