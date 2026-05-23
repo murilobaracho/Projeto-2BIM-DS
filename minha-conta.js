@@ -74,7 +74,7 @@ async function salvarConta(e) {
       'UPDATE usuario SET nome = $1, telefone = $2, foto_url = $3 WHERE email = $4',
       [nome, telRaw ? parseInt(telRaw, 10) : null, fotoUrl, u.email]
     );
-    salvarLocal('futurecast_usuario', { ...u, nome });
+    salvarLocal('futurecast_usuario', { ...u, nome, foto_url: fotoUrl || u.foto_url || null });
     document.getElementById('nome-exibicao').textContent = nome;
     document.getElementById('campo-nova-senha').value      = '';
     document.getElementById('campo-confirmar-senha').value = '';

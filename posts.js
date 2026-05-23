@@ -19,8 +19,13 @@ function criarCard(post) {
   const card = document.createElement('article');
   card.className = 'card';
   const temImg = post.imagem_url && post.imagem_url !== 'placeholder.jpg';
+  const u = usuario();
+  const fotoUrl = u?.foto_url || null;
+  const avatarInner = fotoUrl
+    ? '<img src="' + esc(fotoUrl) + '" alt="avatar" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">'
+    : '';
   card.innerHTML =
-    '<div class="header"><div class="avatar"></div><div class="pessoa">' + esc(post.autor || 'Usuário') + '</div></div>' +
+    '<div class="header"><div class="avatar">' + avatarInner + '</div><div class="pessoa">' + esc(post.autor || 'Usuário') + '</div></div>' +
     (temImg ? '<div class="imagem"><img src="' + esc(post.imagem_url) + '" alt="' + esc(post.titulo) + '"></div>' : '') +
     '<div class="conteudo"><h3 class="titulo">' + esc(post.titulo) + '</h3>' +
     (post.descricao ? '<p class="descricao">' + esc(post.descricao) + '</p>' : '') + '</div>' +
