@@ -1,6 +1,3 @@
-const NEON_URL = 'postgresql://neondb_owner:npg_t2LcrZEXCmx8@ep-fancy-dream-actr329k-pooler.sa-east-1.aws.neon.tech/BD%2FFUTURECAST?sslmode=require&channel_binding=require';
-let _sql = null;
-
 async function sql(query, params = []) {
   if (!_sql) {
     const { neon } = await import('https://esm.sh/@neondatabase/serverless@0.10.4');
