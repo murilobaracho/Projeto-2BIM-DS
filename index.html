@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FutureCast</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+  <div class="container">
+    <div class="lado-esquerdo">
+      <div class="conteudo-auxiliar">
+        <h1 id="nome-login">FutureCast</h1>
+        <h2 id="login-h2">Você não precisa ter o mapa inteiro, só precisa dar o próximo passo.</h2>
+      </div>
+    </div>
+
+    <div class="lado-direito">
+      <!--
+        Removemos action/method do form para controlar o redirecionamento
+        via JS — assim conseguimos salvar o usuário ANTES de ir para home.html.
+        O comportamento visual para o usuário é idêntico ao original.
+      -->
+      <form id="form-login" novalidate>
+        <fieldset class="fieldset-login">
+
+          <div class="form-inicio">
+            <label for="user-email">Email</label>
+            <input
+              type="email"
+              id="user-email"
+              name="email"
+              placeholder="exemplo@dominio.com"
+              required
+            >
+          </div>
+
+          <div class="form-inicio">
+            <label for="user-password">Senha</label>
+            <input
+              type="password"
+              id="user-password"
+              name="password"
+              placeholder="**************"
+              required
+              minlength="6"
+            >
+          </div>
+
+          <button type="submit" id="criar-conta">Confirmar</button>
+
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+  <script src="login.js" defer></script>
+</body>
+</html>

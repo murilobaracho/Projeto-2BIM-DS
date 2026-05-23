@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vida – FutureCast</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="nav-esquerda">
+        <a class="logo" href="home.html">FutureCast</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a class="navegacao" href="Trabalho.html">Trabalho</a>
+        <a class="navegacao" href="Vida.html">Vida</a>
+        <a class="navegacao" href="Familia.html">Família</a>
+        <a class="navegacao" href="contato.html">Contate-nos</a>
+        <a class="navegacao" href="index.html">Sair</a>
+      </div>
+    </nav>
+  </header>
+
+  <h1 class="titulo-principal">Desafios e soluções para uma vida equilibrada:</h1>
+  <hr><br>
+
+  <main class="feed" data-categoria="2" data-categoria-slug="vida">
+    <div class="card-wrapper">
+    <article class="card">
+      <div class="header"><div class="avatar"></div><div class="pessoa">Equipe FutureCast</div></div>
+      <div class="imagem"><img src="https://static.vecteezy.com/ti/vetor-gratis/p1/8089607-equilibrio-emocional-conceito-psicologico-equilibrio-mental-controlando-emocoes-e-sentimentos-para-trabalho-um-jovem-empresario-tenta-equilibrar-trabalho-e-emocao-vetor.jpg" alt="Saúde mental"></div>
+      <div class="conteudo">
+        <h3 class="titulo">Saúde Mental no Cotidiano</h3>
+        <p class="descricao">O estresse diário pode afetar profundamente o bem-estar emocional e físico. Pequenas mudanças de hábito fazem grande diferença na qualidade de vida.</p>
+        <h3>Solução Simples:</h3>
+        <p>Reserve ao menos 20 minutos por dia para uma atividade que te traga prazer, seja caminhar, ouvir música ou simplesmente respirar ao ar livre.</p>
+      </div>
+      <div class="footer"><span><a href="#">Curtir</a></span><span><a href="#">Comentar</a></span><span><a href="#">Compartilhar</a></span></div>
+    </article>
+    </div>
+    <div class="card-wrapper">
+    <article class="card">
+      <div class="header"><div class="avatar"></div><div class="pessoa">Equipe FutureCast</div></div>
+      <div class="imagem"><img src="https://files.adventistas.org/noticias/pt/2014/09/shutterstock_1033689085.jpg" alt="Relações sociais"></div>
+      <div class="conteudo">
+        <h3 class="titulo">Relações Sociais Saudáveis</h3>
+        <p class="descricao">O isolamento social é uma das principais causas de ansiedade e depressão. Manter vínculos afetivos é essencial para a saúde integral da pessoa.</p>
+        <h3>Solução Simples:</h3>
+        <p>Planeje encontros regulares com pessoas queridas. Uma ligação, um café ou uma caminhada juntos já reforçam o senso de pertencimento.</p>
+      </div>
+      <div class="footer"><span><a href="#">Curtir</a></span><span><a href="#">Comentar</a></span><span><a href="#">Compartilhar</a></span></div>
+    </article>
+    </div>
+    <div class="card-wrapper">
+    <article class="card">
+      <div class="header"><div class="avatar"></div><div class="pessoa">Equipe FutureCast</div></div>
+      <div class="imagem"><img src="https://classic.exame.com/wp-content/uploads/2021/03/GettyImages-1180387443.jpg" alt="Gestão do tempo"></div>
+      <div class="conteudo">
+        <h3 class="titulo">Gestão do Tempo Pessoal</h3>
+        <p class="descricao">A sensação de que "o tempo não dá" é comum, mas muitas vezes é reflexo de falta de priorização e não de falta de horas no dia.</p>
+        <h3>Solução Simples:</h3>
+        <p>Experimente listar três prioridades por dia — não dez. Feitas as três, tudo a mais é bônus. Isso reduz a ansiedade e aumenta a sensação de realização.</p>
+      </div>
+      <div class="footer"><span><a href="#">Curtir</a></span><span><a href="#">Comentar</a></span><span><a href="#">Compartilhar</a></span></div>
+    </article>
+    </div>
+  </main>
+
+    <footer class="rodape-wrapper">
+    <div class="rodape">
+      <div class="rodape-marca">
+        <span class="rodape-logo">FutureCast</span>
+        <p class="rodape-slogan">Você não precisa ter o mapa inteiro,<br>só precisa dar o próximo passo.</p>
+      </div>
+      <div class="rodape-nav">
+        <span class="rodape-nav-titulo">Navegação</span>
+        <a href="Trabalho.html">Trabalho</a>
+        <a href="Vida.html">Vida</a>
+        <a href="Familia.html">Família</a>
+        <a href="contato.html">Contate-nos</a>
+      </div>
+      <div class="rodape-equipe">
+        <span class="rodape-equipe-titulo">Desenvolvido com 💜 por</span>
+        <p class="rodape-nomes">Kaiky · Murilo · Marcos · Miguel · Paulo<br>Otávio · Kauê · Matheus W. · Matheus C. · Nicolas</p>
+      </div>
+    </div>
+    <div class="rodape-bottom">© 2026 FutureCast — Todos os direitos reservados</div>
+  </footer>
+
+
+  <button class="btn-novo-post" id="btn-novo-post">＋ Publicar</button>
+
+  <div class="modal-overlay" id="modal-post">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 class="modal-titulo">Nova Publicação</h2>
+        <button class="modal-fechar" id="btn-fechar-modal" aria-label="Fechar">✕</button>
+      </div>
+      <div class="modal-campo">
+        <label for="input-titulo-post">Título <span class="obrigatorio">*</span></label>
+        <input type="text" id="input-titulo-post" placeholder="Sobre o que você quer falar?" maxlength="170">
+      </div>
+      <div class="modal-campo">
+        <label for="input-descricao-post">Descrição</label>
+        <textarea id="input-descricao-post" placeholder="Conte mais sobre o tema…" rows="4" maxlength="600"></textarea>
+      </div>
+      <div class="modal-campo">
+        <label for="input-imagem-post">URL da imagem (opcional)</label>
+        <input type="text" id="input-imagem-post" placeholder="https://…">
+        <img id="preview-imagem" src="" alt="Preview" style="display:none;margin-top:8px;width:100%;border-radius:8px;max-height:180px;object-fit:cover;">
+      </div>
+      <button type="button" id="btn-publicar-post" class="btn-publicar">Publicar</button>
+    </div>
+  </div>
+
+  <script src="interacoes.js" defer></script>
+  <script src="posts.js" defer></script>
+</body>
+</html>
