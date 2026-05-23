@@ -100,13 +100,12 @@ async function salvarConta(e) {
       [nome, telRaw ? parseInt(telRaw, 10) : null, fotoUrl, u.email]
     );
 
-    // Atualiza localStorage com o novo nome
+  
     salvarLocal('futurecast_usuario', { ...u, nome });
     document.getElementById('nome-exibicao').textContent = nome;
 
     mostrarFeedback('Dados salvos com sucesso!', 'sucesso');
 
-    // Limpa campos de senha
     document.getElementById('campo-nova-senha').value      = '';
     document.getElementById('campo-confirmar-senha').value = '';
   } catch (err) {
