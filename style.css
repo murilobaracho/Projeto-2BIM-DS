@@ -116,7 +116,7 @@ nav {
     .nav-links.aberto { display: flex; }
     .nav-links .navegacao { font-size: 18px; }
     .nav-saudacao { font-size: .8rem; }
-    .titulo-principal { padding-top: 90px; }
+    .titulo-principal { padding-top: 60px; }
 }
 
 @keyframes slideDown {
@@ -749,7 +749,7 @@ form.form-contate input {
     #nome-login { margin-left: 0; justify-content: center; }
     #login-h2 { font-size: 22px; max-width: 90%; margin-left: 0; }
     .lado-direito { padding: 30px 20px; }
-    form#form-login { width: 100%; margin: 0; }
+    form #form-login { width: 100%; margin: 0; }
 
     .feed { gap: 16px; padding: 16px 16px 120px; }
     .card-wrapper { width: 100%; flex: 0 0 100%; }
