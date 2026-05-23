@@ -185,10 +185,14 @@ h1 {
 
 .fieldset-login, .fieldset-contate-nos { border: none; }
 
+.fieldset-contate-nos {
+    margin-bottom: -15%;
+}
+
 form#form-login,
 form.form-contate {
     width: 350px;
-    margin: 10% auto;
+    margin: 11% auto ;
     animation: ampliar-no-inicio-h2 1s ease-in-out forwards;
 }
 form#form-login .form-inicio,
@@ -237,7 +241,7 @@ form.form-contate input {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: -5% auto -8%;
+    margin: -5% auto 0%;
 }
 
 .btn-novo-post {
