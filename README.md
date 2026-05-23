@@ -1,3 +1,3 @@
-This project is a school assignment for the Web Interfaces I course.
+This project is a school assignment for the Web Interfaces 1 course.
 
-Developed by: Kaiky, Murilo, Marcos, Miguel, Paulo, Otávio, Victor Valentim, Kauê, Matheus Wanderson :)
+Developed by: Kaiky · Murilo · Marcos · Miguel · Paulo Otávio · Kauê · Matheus W. · Matheus C · Nicolas :)
