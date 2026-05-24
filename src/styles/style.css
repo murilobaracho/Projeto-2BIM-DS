@@ -748,14 +748,23 @@ form.form-contate input {
 }
 
 @media (max-width: 768px) {
+    
+/* fix: rolagem para direita */
+    body, html {
+  overflow-x: hidden;
+}
+
     .container { flex-direction: column; }
-    .lado-esquerdo { padding: 30px 20px; align-items: center; }
-    #nome-login { margin-left: 0; justify-content: center; }
-    #login-h2 { font-size: 22px; max-width: 90%; margin-left: 0; }
+    .lado-esquerdo { padding: 30px 20px; align-items: center;}
+    #nome-login { margin-left: 0; justify-content: center; margin-top: -5px; }
+    #login-h2 { font-size: 21px; max-width: 100%; margin-left: 0; }
     .lado-direito { padding: 30px 20px; }
     form #form-login { width: 100%; margin: 0; }
 
-    .feed { gap: 16px; padding: 16px 16px 120px; }
+    .fieldset-login { margin-bottom: -10%; margin-top: -9%; }
+
+
+    .feed { gap: 16px; padding: 16px 16px 120px; margin-bottom: -30%;}
     .card-wrapper { width: 100%; flex: 0 0 100%; }
     .card { width: 100%; }
 

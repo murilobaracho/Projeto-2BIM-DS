@@ -48,6 +48,7 @@ async function carregarDados() {
       if (d.nome)     { document.getElementById('campo-nome').value = d.nome; document.getElementById('nome-exibicao').textContent = d.nome; }
       if (d.telefone) document.getElementById('campo-telefone').value = String(d.telefone);
       if (d.foto_url) { document.getElementById('campo-foto').value = d.foto_url; previewFoto(d.foto_url); }
+      salvarLocal('futurecast_usuario', { ...lerLocal('futurecast_usuario'), nome: d.nome || u.nome, foto_url: d.foto_url || null });
     }
   } catch (err) { console.warn('minha-conta carregarDados:', err.message); }
 }

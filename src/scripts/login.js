@@ -50,7 +50,12 @@ async function inicializarLogin() {
     } catch (err) {
       console.warn('Neon usuario write:', err.message);
     }
-    salvarLocal('futurecast_usuario', { nome, email });
+    let fotoUrl = null;
+    try {
+      const r = await sql('SELECT foto_url FROM usuario WHERE email = $1', [email]);
+      fotoUrl = r[0]?.foto_url || null;
+    } catch {}
+    salvarLocal('futurecast_usuario', { nome, email, foto_url: fotoUrl });
     setTimeout(() => { window.location.href = 'home.html'; }, 300);
   });
 }

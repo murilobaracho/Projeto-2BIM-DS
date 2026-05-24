@@ -20,7 +20,7 @@ function criarCard(post) {
   card.className = 'card';
   const temImg = post.imagem_url && post.imagem_url !== 'placeholder.jpg';
   const u = usuario();
-  const fotoUrl = u?.foto_url || null;
+  const fotoUrl = post.autor_foto || u?.foto_url || null;
   const avatarInner = fotoUrl
     ? '<img src="' + esc(fotoUrl) + '" alt="avatar" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">'
     : '';
@@ -46,8 +46,8 @@ async function carregarPosts() {
   const cat = categoriaAtual();
   try {
     const query = cat === '0'
-      ? 'SELECT p.id, p.titulo, p.descricao, p.imagem_url, u.nome AS autor FROM post p LEFT JOIN usuario u ON u.id = p.autor_id WHERE p.autor_id IS NOT NULL ORDER BY p.publicado_em DESC LIMIT 20'
-      : 'SELECT p.id, p.titulo, p.descricao, p.imagem_url, u.nome AS autor FROM post p LEFT JOIN usuario u ON u.id = p.autor_id WHERE p.autor_id IS NOT NULL AND p.categoria_id = $1 ORDER BY p.publicado_em DESC LIMIT 20';
+      ? 'SELECT p.id, p.titulo, p.descricao, p.imagem_url, u.nome AS autor, u.foto_url AS autor_foto FROM post p LEFT JOIN usuario u ON u.id = p.autor_id WHERE p.autor_id IS NOT NULL ORDER BY p.publicado_em DESC LIMIT 20'
+      : 'SELECT p.id, p.titulo, p.descricao, p.imagem_url, u.nome AS autor, u.foto_url AS autor_foto FROM post p LEFT JOIN usuario u ON u.id = p.autor_id WHERE p.autor_id IS NOT NULL AND p.categoria_id = $1 ORDER BY p.publicado_em DESC LIMIT 20';
     const params = cat === '0' ? [] : [parseInt(cat)];
     const posts = await sql(query, params);
     for (const post of posts) {
