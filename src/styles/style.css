@@ -279,7 +279,6 @@ form.form-contate input {
     position: fixed;
     inset: 0;
     background: rgba(20,10,40,.55);
-    backdrop-filter: blur(4px);
     z-index: 1100;
     align-items: center;
     justify-content: center;
